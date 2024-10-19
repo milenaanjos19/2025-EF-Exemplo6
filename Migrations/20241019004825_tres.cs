@@ -6,11 +6,18 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EF.Exemplo6.Migrations
 {
     /// <inheritdoc />
-    public partial class InclusaodegeneroNparalivrosM : Migration
+    public partial class tres : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<int>(
+                name: "QuantidadeEmEstoque",
+                table: "Livro",
+                type: "integer",
+                nullable: false,
+                defaultValue: 0);
+
             migrationBuilder.CreateTable(
                 name: "Genero",
                 columns: table => new
@@ -62,6 +69,10 @@ namespace EF.Exemplo6.Migrations
 
             migrationBuilder.DropTable(
                 name: "Genero");
+
+            migrationBuilder.DropColumn(
+                name: "QuantidadeEmEstoque",
+                table: "Livro");
         }
     }
 }

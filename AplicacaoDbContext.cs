@@ -18,7 +18,7 @@ public class AplicacaoDbContext : DbContext
         // var logSql = new LoggerFactory();
         // logSql.AddProvider(new MeuLogProvider());
         // optionsBuilder.UseLoggerFactory(logSql);
-        optionsBuilder.UseNpgsql(@"Host=192.168.56.101;" +
+        optionsBuilder.UseNpgsql(@"Host=10.140.74.44;" +
                                  "Username=biblioteca;" +
                                  "Password=123456;" +
                                  "Database=biblioteca;");

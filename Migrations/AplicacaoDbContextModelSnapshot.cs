@@ -114,6 +114,9 @@ namespace EF.Exemplo6.Migrations
                     b.Property<int?>("Paginas")
                         .HasColumnType("integer");
 
+                    b.Property<int>("QuantidadeEmEstoque")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasMaxLength(120)
